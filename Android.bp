@@ -14,8 +14,15 @@
 // limitations under the License.
 //
 
+android_library {
+    name: "org.lineageos.platform.res-compat",
+
+    resource_dirs: ["res"],
+}
+
 java_library {
     name: "org.lineageos.platform.internal",
 
     srcs: ["src/**/*.java"],
+    static_libs: ["org.lineageos.platform.res-compat"],
 }
